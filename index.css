@@ -1,15 +1,60 @@
 body {
   font-family:'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  margin: 0;
+  margin: 2rem;
   padding: 0;
-  background-color: #121212;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#header{
+header{
   text-align: center;
-  margin: 2rem;
+  position: fixed;
+  top:0;
+  background-color: grey;
+  width: 100%;
 }
-h1 {
-  color: #ffffff;
-  font-size: 3rem;
+
+/* Header Title */
+#header h1 {
+  color: #000000ff;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+#header h1 a{
+  text-decoration: underline;
+  color: inherit;
+}
+
+/* Navigation Menu */
+#header ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  list-style-type: none;
+  margin: 0.5vw;
+  padding: 0.5vw;
+  flex-wrap: wrap;
+}
+
+#header ul li{
+  font-size: 2vh;
+  border: solid 2px black;
+  border-radius: 1vw;
+  padding: 0.5rem;
+}
+
+/* Main Content Area */
+.content{
+  margin-top: 10rem;
+  width: 80%;
+  background-color: red;
+}
+
+.section{
+  background-color: red;
 }

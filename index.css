@@ -1,0 +1,15 @@
+body {
+  font-family:'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+}
+
+#header{
+  text-align: center;
+  margin: 2rem;
+}
+h1 {
+  color: #ffffff;
+  font-size: 3rem;
+}

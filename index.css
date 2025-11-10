@@ -1,5 +1,11 @@
+
+:root{
+  --header-bg-color: rgba(36, 36, 36, 1);
+  --header-height: 5rem;
+}
+
 body {
-  font-family:'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 2rem;
   padding: 0;
   background-color: #ffffff;
@@ -8,51 +14,101 @@ body {
   align-items: center;
 }
 
-header{
-  text-align: center;
-  position: fixed;
-  top:0;
-  background-color: grey;
-  width: 100%;
+
+/*  very small screens - any smaller than this and the header UI doesnt work.
+    Need to add menu button where links slide out from under the header */
+@media only screen and (max-width: 300px) {
+  body{
+    background-color: #000000;
+  }
 }
 
-/* Header Title */
-#header h1 {
-  color: #000000ff;
-  font-size: 2rem;
-  padding: 1rem;
+/* keep header fixed, use the inner .container as the 3x2 grid */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--header-bg-color);
+  z-index: 1000;
+  filter: drop-shadow(0 0 0.75rem rgba(36, 36, 36, 0.8));
+  height: calc(var(--header-height) + 2rem); /* approximate space for 2 rows */
+}
+
+/* container becomes a 3-column x 2-row grid */
+header .container{
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  grid-template-rows: repeat(2, auto);
+  gap: 0.5rem;
+  margin: 0.5rem;
+  justify-content: center;
+}
+
+/* Logo/title occupies the entire first column (both rows) */
+#header h1{
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  grid-column: 1 / 2;
+  grid-row: 1 / -1; /* span both rows */
+  margin: 0;
+  font-family: "Major Mono Display", monospace;
+  font-size: clamp(1rem, 4vw, 1.6rem);
+  border: 0.15rem solid #000;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background: #fff;
+  justify-self: center;
+  align-self: center;
 }
 
 #header h1 a{
-  text-decoration: underline;
   color: inherit;
+  text-decoration: none;
 }
 
-/* Navigation Menu */
-#header ul{
+/* nav fills columns 2-3 and provides a 2x2 grid for the 4 links */
+.nav{
+  grid-column: 2 / -1; /* columns 2 and 3 */
+  grid-row: 1 / -1; /* span both rows */
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 0.2rem;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+/* each link becomes one cell in the 2x2 nav grid */
+.nav li{
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  gap: 1rem;
-  text-align: center;
-  list-style-type: none;
-  margin: 0.5vw;
-  padding: 0.5vw;
-  flex-wrap: wrap;
+  font-family: "Major Mono Display", monospace;
+  font-size: clamp(1rem, 4vw, 1.6rem);
+  border: 0.15rem solid #000;
+  border-radius: 0.5rem;
+  background: #fff;
+  transition: color 0.3s, background-color 0.3s;
+  justify-self: center;
+  align-self: center;
+  width: 90%;
+  height: 90%;
 }
 
-#header ul li{
-  font-size: 2vh;
-  border: solid 2px black;
-  border-radius: 1vw;
+.nav li a{
+  color: inherit;
+  text-decoration: none;
   padding: 0.5rem;
+  display: block;
 }
 
-/* Main Content Area */
+.nav li:hover{
+  background-color: #eee;
+}
+
+/* make sure main content doesn't overlap the fixed header */
 .content{
-  margin-top: 10rem;
-  width: 80%;
-  background-color: red;
+  margin-top: var(--header-height); /* approximate space for 2 rows */
 }
 
 .section{

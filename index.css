@@ -2,6 +2,9 @@
 :root{
   --header-bg-color: rgba(36, 36, 36, 1);
   --header-height: 5rem;
+  --shownav: grid;
+
+  --isSmall: false;
 }
 
 @font-face {
@@ -19,14 +22,99 @@ body {
   align-items: center;
 }
 
+.line-container{
+  display: none;
+}
+
+/* container becomes a 3-column x 2-row grid */
+header .container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: repeat(2, auto);
+  gap: 0.5rem;
+  margin: 0.5rem;
+  justify-content: center;
+}
+
+/* nav fills columns 2-3 and provides a 2x2 grid for the 4 links */
+header .nav{
+  grid-column: 2 / -1; /* columns 2 and 3 */
+  grid-row: 1 / -1; /* span both rows */
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 0.2rem;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.hidden-nav{
+  display: none;
+}
+
+.show-nav{
+  display: grid;
+}
 
 /*  very small screens - any smaller than this and the header UI doesnt work.
     Need to add menu button where links slide out from under the header */
 @media only screen and (max-width: 300px) {
+  :root{
+    --shownav: none;
+    --isSmall: true;
+  }
+
   body{
     background-color: #000000;
   }
+
+  header .container{
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    grid-template-rows: none;
+  }
+
+  .line-container{
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .line{
+    width: 35px;
+    height: 5px;
+    margin: 4px;
+    border-radius: 2px;
+    background-color: #fff;
+  }
+
+  header .nav{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .line-container a:hover{
+    cursor: pointer;
+  }
+  
+  header .nav li{
+    width: auto;
+    height: auto;
+    margin: 0.2rem;
+    font-size: clamp(0.5rem, 2vw, 1rem);
+  }
 }
+
+@media not screen and (max-width: 300px) {
+  :root{
+    --shownav: grid;
+  }
+}
+
 
 /* keep header fixed, use the inner .container as the 3x2 grid */
 header{
@@ -40,15 +128,6 @@ header{
   height: fit-content;
 }
 
-/* container becomes a 3-column x 2-row grid */
-header .container{
-  display: grid;
-  grid-template-columns: auto auto auto ;
-  grid-template-rows: repeat(2, auto);
-  gap: 0.5rem;
-  margin: 0.5rem;
-  justify-content: center;
-}
 
 /* Logo/title occupies the entire first column (both rows) */
 #header h1{
@@ -70,18 +149,6 @@ header .container{
 #header h1 a{
   color: inherit;
   text-decoration: none;
-}
-
-/* nav fills columns 2-3 and provides a 2x2 grid for the 4 links */
-.nav{
-  grid-column: 2 / -1; /* columns 2 and 3 */
-  grid-row: 1 / -1; /* span both rows */
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(2, auto);
-  gap: 0.2rem;
-  margin: 0rem;
-  padding: 0rem;
 }
 
 /* each link becomes one cell in the 2x2 nav grid */

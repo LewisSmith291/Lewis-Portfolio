@@ -2,9 +2,6 @@
 :root{
   --header-bg-color: rgba(36, 36, 36, 1);
   --header-height: 5rem;
-  --shownav: grid;
-
-  --isSmall: false;
 }
 
 @font-face {
@@ -34,6 +31,7 @@ header .container{
   gap: 0.5rem;
   margin: 0.5rem;
   justify-content: center;
+  z-index: 1000;
 }
 
 /* nav fills columns 2-3 and provides a 2x2 grid for the 4 links */
@@ -48,28 +46,17 @@ header .nav{
 }
 
 .hidden-nav{
-  display: none;
+  top:-110%;
 }
 
 .show-nav{
-  display: grid;
+  top:0;
 }
 
-/*  very small screens - any smaller than this and the header UI doesnt work.
-    Need to add menu button where links slide out from under the header */
 @media only screen and (max-width: 300px) {
-  :root{
-    --shownav: none;
-    --isSmall: true;
-  }
-
-  body{
-    background-color: #000000;
-  }
-
   header .container{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    flex-direction: row;
     grid-template-columns: none;
     grid-template-rows: none;
   }
@@ -92,9 +79,12 @@ header .nav{
   }
 
   header .nav{
-    flex-direction: row;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    transition: top 0.5s, background-color 0.3s;
   }
 
   .line-container a:hover{
@@ -106,12 +96,6 @@ header .nav{
     height: auto;
     margin: 0.2rem;
     font-size: clamp(0.5rem, 2vw, 1rem);
-  }
-}
-
-@media not screen and (max-width: 300px) {
-  :root{
-    --shownav: grid;
   }
 }
 

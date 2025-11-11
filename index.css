@@ -32,7 +32,7 @@ header{
   background-color: var(--header-bg-color);
   z-index: 1000;
   filter: drop-shadow(0 0 0.75rem rgba(36, 36, 36, 0.8));
-  height: calc(var(--header-height) + 2rem); /* approximate space for 2 rows */
+  height: fit-content;
 }
 
 /* container becomes a 3-column x 2-row grid */
@@ -108,7 +108,7 @@ header .container{
 
 /* make sure main content doesn't overlap the fixed header */
 .content{
-  margin-top: var(--header-height); /* approximate space for 2 rows */
+  margin-top: calc(var(--header-height) + 2vw); /* approximate space for 2 rows */
 }
 
 .section{

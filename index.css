@@ -238,7 +238,11 @@ header h1 a{
 
 .section h2{
   text-decoration: underline;
-  font-family: Major Mono Display, monospace;
+  font-family: Major Mono Display, Roboto Mono, monospace;
+}
+
+.section h3{
+  font-family: Roboto Mono, Major Mono Display, monospace;
 }
 
 .section p{
@@ -246,9 +250,9 @@ header h1 a{
 }
 
 .section a{
-  font-family: Major Mono Display, Roboto Mono, monospace;
+  font-family: Roboto Mono, Major Mono Display, monospace;
   text-decoration: underline;
-  color: inherit;
+  color: #4e848fff;
 }
 
 .section a:hover{
@@ -267,6 +271,14 @@ header h1 a{
   font-family: Roboto Mono, Major Mono Display, monospace;
 }
 
+.featured-site{
+  background-color: var(--links-bg-color);
+  padding: 1vw;
+  margin: 1vw 0;
+  border-radius: 1vw;
+}
+
+
 body::after{
   content: "";
   display: block;
@@ -284,6 +296,6 @@ footer{
 
 .footer-container{
   height: 100%;
-  display: flex;
+  display: block;
   justify-content: center;
 }

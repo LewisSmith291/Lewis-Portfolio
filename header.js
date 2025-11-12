@@ -1,6 +1,5 @@
 const style = window.getComputedStyle(document.body);
 const mobileMaxWidth = 400;
-window.onLoad(setupHeader());
 
 function setupHeader(){
   console.log(mobileMaxWidth);

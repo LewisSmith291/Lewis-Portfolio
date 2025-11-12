@@ -2,7 +2,6 @@ const style = window.getComputedStyle(document.body);
 const mobileMaxWidth = 400;
 
 function setupHeader(){
-  console.log(mobileMaxWidth);
   if (window.innerWidth > mobileMaxWidth){
     document.querySelector('header .nav').classList.add('show-nav');
     document.querySelector('header .nav').classList.remove('hidden-nav');
@@ -27,7 +26,6 @@ function onResize(){
     nav.classList.add('show-nav');
   }
   else {
-    console.log("Resized");
     nav.classList.remove('show-nav');
     nav.classList.add('hidden-nav');
   }

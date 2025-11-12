@@ -101,7 +101,7 @@ header h1{
 }
 
 /* Overrites previous attributes when screen is small*/
-@media only screen and (max-width: 400px){ 
+@media only screen and (max-width: 450px){ 
 
   /* Switch header to flex column layout on mobile */
   header .container{

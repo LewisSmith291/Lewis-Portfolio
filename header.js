@@ -1,5 +1,5 @@
 const style = window.getComputedStyle(document.body);
-const mobileMaxWidth = 400;
+const mobileMaxWidth = 450;
 
 function setupHeader(){
   if (window.innerWidth > mobileMaxWidth){

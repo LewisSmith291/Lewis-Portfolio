@@ -1,9 +1,10 @@
-var style = window.getComputedStyle(document.body);
-
+const style = window.getComputedStyle(document.body);
+const mobileMaxWidth = 400;
 window.onLoad(setupHeader());
 
 function setupHeader(){
-  if (window.innerWidth > 300){
+  console.log(mobileMaxWidth);
+  if (window.innerWidth > mobileMaxWidth){
     document.querySelector('header .nav').classList.add('show-nav');
     document.querySelector('header .nav').classList.remove('hidden-nav');
   }
@@ -22,11 +23,12 @@ function toggleNav(){
 
 function onResize(){
   const nav = document.querySelector('header .nav');
-  if (window.innerWidth > 300){
+  if (window.innerWidth > mobileMaxWidth){
     nav.classList.remove('hidden-nav');
     nav.classList.add('show-nav');
   }
   else {
+    console.log("Resized");
     nav.classList.remove('show-nav');
     nav.classList.add('hidden-nav');
   }

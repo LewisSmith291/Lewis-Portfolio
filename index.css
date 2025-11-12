@@ -1,9 +1,12 @@
 
 :root{
+  /* Colour scheme variables */
   --header-bg-color: #6FA4AF;
   --links-bg-color: #B8C4A9;
   --logo-bg-color: #F4E9D7;
   --body-color: #D97D55;
+
+  /* Header variables */
   --header-height: 5rem;
 }
 
@@ -84,7 +87,7 @@ header h1{
   align-self: center;
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 400px){ 
 
   /* Switch header to flex column layout on mobile */
   header .container{
@@ -95,7 +98,6 @@ header h1{
     grid-template-rows: none;
     height: auto;
     margin: 0;
-    padding: var(--=header-height);
   }
   
   /* Hides the link list from overlapping background */
@@ -144,7 +146,6 @@ header h1{
   /* Mobile navigation styling */
   header .nav{
     z-index: -100;
-    position: absolute;
     padding-top: 10%;
     position: fixed;
     display: flex;
@@ -168,7 +169,7 @@ header h1{
     height: auto;
     margin: 0.2rem;
     font-size: clamp(0.5rem, 2vw, 1rem);
-    width: calc(90vw);
+    width: 90vw;
   }
 }
 
@@ -212,9 +213,21 @@ header h1 a{
 
 /* make sure main content doesn't overlap the fixed header */
 .content{
-  margin-top: calc(var(--header-height) + 2vw); /* approximate space for 2 rows */
+  margin-top: calc(var(--header-height) + 2vw);
+  width: 80vw; /* approximate space for 2 rows */
 }
+
 
 .section{
   background-color: var(--logo-bg-color);
+  padding: 2vw;
+  margin: 1vw;
+}
+
+.section h2{
+  font-family: Major Mono Display, monospace;
+}
+
+.section p{
+  font-family: Major Mono Display, monospace;
 }

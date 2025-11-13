@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000" />
+
+    <title>Lewis Smith — Web Developer</title>
+    <meta name="description" content="Portfolio for Lewis Smith Web-Developer"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Lewis Smith — Web Developer"/>
+    <meta property="og:description" content="Frontend-focused web developer building fast, accessible, 
+      and responsive websites. View information about me,portfolio, and contact information." />
+    <meta property="og:url" content="https://github.com/LewisSmith291/Lewis-Portfolio"/>
+    <link rel="canonical" href="https://github.com/LewisSmith291/Lewis-Portfolio" />
+    <link rel="stylesheet", href="index.css"/>
+    <script src="header.js" defer></script>
+  </head>
+
+  <body>
+    <header id="header" onload="setupHeader()" onresize="onResize()">
+      <div class="container">
+        <h1 id="page-title"><div><a href="index.html" aria-label="Home">LeWIS<br>MAKEs<br>PAGeS</a></div></h1>
+        <div class="line-container">
+          <a onclick="toggleNav()" class="lines-button" aria-label="Toggle navigation menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </a>
+        </div>
+        <ul class="nav hide-nav">
+          <li><a href="/index.html" aria-label="Go to homepage">HoME</a></li>
+          <li><a href="/projects.html" aria-label="Go to projects page">pRoJeCTs</a></li>
+          <li><a href="/about-me.html" aria-label="Go to about page">ABoUT</a></li>
+          <li><a href="/contact.html" aria-label="Go to conact page">coNTACT</a></li>
+        </ul>
+      </div>
+    </header>
+    
+    <main id="main-content" class="content">
+      <section id="info" class="section">
+          <h2>About Me</h2>
+          <br>
+          <p>
+            My name is Lewis and I am a freelance frontend-focused web developer. I really enjoy designing and developing websites and am trying to make a living out of it to support my family.
+          </p>
+          <p>
+            I attended the University of Kent for my undergraduate degree in Computer Science (Hons), where I graduated First Class. 
+            After that, I completed an MA in Games Design at Canterbury Christ Church University. 
+            The combinatino of these two subjects allowed me to channel my creativity through programming. 
+            I am always trying to learn new things every day and create cool looking things with it.
+          </p>
+          <p>
+            I spent a long time around abolut the time of my Masters using Unity to create games. For my final project I created a VR game where the player competes in a wizard duel.
+            They would use the VR controllers as a wand and depending on how they waved it, different spells would cast. I completed this project entirely by myself which involved:
+          </p>
+          <ul style="padding: 0; padding-left: 0.5vw;">
+            <li>Creating 3D models</li>
+            <li>Programming</li>
+            <li>Using the Unity engine to develop the game</li>
+            <li>Playtesting</li>
+            <li>Sound design</li>
+          </ul>
+          <p>
+            I really enjoy game design and programming, 
+            however it is rather hard to find a paid, stable job as a beginner, 
+            and the pressure of the arrival of my son Atlas forced me to pursue a more imminently possible career. So I went back to my roots from Computer Science.
+            I didn't particularly study website creation in University, however I have embarked on a course over the past year learning website programming and have 
+            taken quite an interest to website creation and optimisation. It has a fantastic balance of creativity and efficient programming.
+          </p>
+      </section>
+    </main>
+  </body>
+  <footer id="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Lewis Smith. All rights reserved.</p>
+      <p>Email: <a href="mailto:lewisterencesmith@gmail.com">lewisterencesmith@gmail.com</a></p>
+      <p>Phone: <a href="tel:+447954100508">(+44) 7954 100508</a></p>
+    </div>
+  </footer>
+  </html>

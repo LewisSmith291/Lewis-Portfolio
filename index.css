@@ -264,7 +264,8 @@ header h1 a{
 }
 
 .section li{
-  margin: 1vw;
+  margin: 0.5vw;
+  font-family: Roboto Mono, Major Mono Display, monospace;
 }
 
 .section li a{

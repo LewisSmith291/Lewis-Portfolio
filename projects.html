@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000" />
+
+    <title>Lewis Smith — Web Developer</title>
+    <link rel="icon" type="image/png" href="Images/LewisMakesPages.png">
+    <meta name="description" content="Portfolio for Lewis Smith Web-Developer"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Lewis Smith — Web Developer"/>
+    <meta property="og:description" content="Frontend-focused web developer building fast, accessible, 
+      and responsive websites. View information about me,portfolio, and contact information." />
+    <meta property="og:url" content="https://github.com/LewisSmith291/Lewis-Portfolio"/>
+    <link rel="canonical" href="https://github.com/LewisSmith291/Lewis-Portfolio" />
+    <link rel="stylesheet", href="index.css"/>
+    <script src="header.js" defer></script>
+  </head>
+
+  
+  <body>
+    <header id="header" onload="setupHeader()" onresize="onResize()">
+      <div class="container">
+        <h1 id="page-title"><div><a href="https://lewissmith291.github.io/Lewis-Portfolio" aria-label="Home">LeWIS<br>MAKEs<br>PAGeS</a></div></h1>
+        <div class="line-container">
+          <a onclick="toggleNav()" class="lines-button" aria-label="Toggle navigation menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </a>
+        </div>
+        <ul class="nav hide-nav hidden-nav">
+          <li><a href="https://lewissmith291.github.io/Lewis-Portfolio" aria-label="Go to homepage">HoME</a></li>
+          <li><a href="https://lewissmith291.github.io/Lewis-Portfolio/projects.html" aria-label="Go to projects page">pRoJeCTs</a></li>
+          <li><a href="https://lewissmith291.github.io/Lewis-Portfolio/about-me.html" aria-label="Go to about page">ABoUT</a></li>
+          <li><a href="https://lewissmith291.github.io/Lewis-Portfolio/contact.html" aria-label="Go to conact page">coNTACT</a></li>
+        </ul>
+      </div>
+    </header>
+      <main id="main-content" class="content">
+        <section id="featured" class="section">
+          <h2>Featured Sites</h2>
+          <div class="featured-site">
+            <h3>Web Dev Portfolio (This Website)</h3>
+            <p>GitHub Repo: <a href="https://github.com/LewisSmith291/Lewis-Portfolio">https://github.com/LewisSmith291/Lewis-Portfolio</a></p>
+          </div>
+          <div class="featured-site">
+            <h3>Styling and Keys (React WebApp)</h3>
+            <p>GitHub Repo: <a href="https://github.com/LewisSmith291/styling-and-keys">https://github.com/LewisSmith291/styling-and-keys</a></p>
+            <p>Site Link: <a href="https://lewissmith291.github.io/styling-and-keys/">https://lewissmith291.github.io/styling-and-keys/</a></p>
+            <p>React project created to practise inputs and updates, array methods (map, filter, etc.), conditional rendering, and conditional styling.</p>
+          </div>
+          <div class="featured-site">
+            <h3>Array Manipulation (JavaScript WebApp)</h3>
+            <p>GitHub Repo: <a href="https://github.com/LewisSmith291/Array-Manipulation">https://github.com/LewisSmith291/Array-Manipulation</a></p>
+            <p>Site Link: <a href="https://lewissmith291.github.io/Array-Manipulation/">https://lewissmith291.github.io/Array-Manipulation/</a></p>
+            <p>JavaScript project created to practise manipulating and rendering content from arrays, and styling the page to look like a computer terminal.</p>
+          </div>
+        </section>
+        
+      </main>
+  </body>
+    <footer id="footer">
+      <div class="footer-container">
+        <p>&copy; 2025 Lewis Smith. All rights reserved.</p>
+        <p>Email: <a href="mailto:lewisterencesmith@gmail.com">lewisterencesmith@gmail.com</a></p>
+        <p>Phone: <a href="tel:+447954100508">(+44) 7954 100508</a></p>
+      </div>
+    </footer>
+
+</html>

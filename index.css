@@ -238,7 +238,7 @@ header h1 a{
 
 .section{
   background-color: var(--logo-bg-color);
-  padding: 2vw;
+  padding: 1vw 1vw 1vw 2vw;
   margin: 1vw;
   border-radius: 1rem;
   font-size: clamp(1rem, 2vw, 1.5rem);
@@ -272,7 +272,7 @@ header h1 a{
 }
 
 .section li{
-  margin: 0.5vw;
+  margin: 0.5vw 0vw 0vw 2vw;
   font-family: Roboto Mono, Major Mono Display, monospace;
 }
 

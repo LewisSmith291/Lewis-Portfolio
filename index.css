@@ -229,7 +229,7 @@ header h1 a{
   border-radius: 1vw;
   border: none;
   width: 100%;
-    font-size: clamp(1.5rem, 2vw, 1.5rem);
+  font-size: clamp(1.5rem, 2vw, 1.5rem);
 }
 
 /* Navigation link hover effect */
@@ -255,6 +255,8 @@ header h1 a{
 }
 
 .social-button{
+  display: flex;
+  gap: 1vw;
   padding: 1vw;
   border-radius: 1vw;
   font-size: 2vw;
@@ -263,7 +265,14 @@ header h1 a{
   border: none;
   color: black;
   text-decoration: none;
+  width: 30%;
+  justify-content: center;
 }
+
+.social-icon{
+  align-self: center;
+}
+
 
 .social-button:hover{
   filter:brightness(90%);
@@ -274,6 +283,12 @@ header h1 a{
   filter:brightness(70%);
 }
 
+ul{
+  list-style-type: none;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .section{
   background-color: var(--logo-bg-color);
@@ -281,18 +296,21 @@ header h1 a{
   margin: 2vw;
   border-radius: 1rem;
   font-size: clamp(1rem, 2vw, 1.5rem);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.section h2{
-  text-decoration: underline;
+h2{
   font-family: Major Mono Display, Roboto Mono, monospace;
+  font-size: 1.3rem;
+  text-decoration: underline;
+  border-radius: 1rem;
+  background-color: var(--logo-bg-color);
+  padding: 6vw;
 }
 
-.section h3{
-  font-family: Roboto Mono, Major Mono Display, monospace;
-}
-
-.section p{
+.section p, .section h3{
   font-family: Roboto Mono, Major Mono Display, monospace;
 }
 

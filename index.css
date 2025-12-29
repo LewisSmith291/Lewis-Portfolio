@@ -71,6 +71,7 @@ header{
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1000;
   background-color: var(--header-bg-color);
   filter: drop-shadow(0 0 2rem rgba(36, 36, 36, 0.8));
 }
@@ -252,11 +253,25 @@ header h1 a{
   flex-direction: row;
   justify-content: space-evenly;
 }
+
 .social-button{
   padding: 1vw;
   border-radius: 1vw;
   font-size: 2vw;
   font-family: Roboto Mono, Major Mono Display, monospace;
+  background-color: var(--logo-bg-color);
+  border: none;
+  color: black;
+  text-decoration: none;
+}
+
+.social-button:hover{
+  filter:brightness(90%);
+  cursor: pointer;
+}
+
+.social-button:active{
+  filter:brightness(70%);
 }
 
 

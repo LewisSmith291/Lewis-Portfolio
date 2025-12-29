@@ -247,6 +247,18 @@ header h1 a{
   height: 7vw;
 }
 
+#socials{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.social-button{
+  padding: 1vw;
+  border-radius: 1vw;
+  font-size: 2vw;
+  font-family: Roboto Mono, Major Mono Display, monospace;
+}
+
 
 .section{
   background-color: var(--logo-bg-color);

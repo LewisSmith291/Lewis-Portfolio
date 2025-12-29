@@ -236,10 +236,22 @@ header h1 a{
   filter: brightness(85%);
 }
 
+#skills-list{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.tech{
+  height: 7vw;
+}
+
+
 .section{
   background-color: var(--logo-bg-color);
   padding: 1vw 1vw 1vw 2vw;
-  margin: 1vw;
+  margin: 2vw;
   border-radius: 1rem;
   font-size: clamp(1rem, 2vw, 1.5rem);
 }
@@ -280,7 +292,7 @@ header h1 a{
   font-family: Roboto Mono, Major Mono Display, monospace;
 }
 
-#featured{
+.featured{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -291,7 +303,6 @@ header h1 a{
   padding: 1vw;
   margin: 1vw 0;
   border-radius: 1rem;
-  width: 80%;
 }
 
 .site-preview{

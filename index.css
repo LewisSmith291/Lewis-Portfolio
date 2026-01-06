@@ -100,15 +100,22 @@ header h1{
   width: 80vw; /* approximate space for 2 rows */
   font-size: 0.8rem;
 }
+header .container{
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
 
 /* Overrites previous attributes when screen is small*/
 @media only screen and (max-width: 450px){ 
-
+  /*
   :root{
     --header-height:25vw;
   }
 
-  /* Switch header to flex column layout on mobile */
+  /* Switch header to flex column layout on mobile 
   header .container{
     position: relative;
     display:flex;
@@ -119,7 +126,7 @@ header h1{
     margin: 0;
   }
   
-  /* Hides the link list from overlapping background */
+  /* Hides the link list from overlapping background 
   header h1::after{
     z-index: -50;
     content: "";
@@ -147,7 +154,7 @@ header h1{
     border: solid black 0.15rem;
   }
 
-  /* While on mobile screen, show menu icon*/
+  /* While on mobile screen, show menu icon
   .line-container{
     position: fixed;
     top: 0.5rem;
@@ -167,7 +174,7 @@ header h1{
     border: solid black 0.5vw;
   }
 
-  /* Mobile navigation styling */
+  /* Mobile navigation styling 
   header .nav{
     z-index: -100;
     padding-top: 10%;
@@ -182,12 +189,12 @@ header h1{
     width: 100vw;
   }
 
-  /* Shows that user can select the menu button */
+  /* Shows that user can select the menu button 
   .line-container a:hover{
     cursor: pointer;
   }
   
-  /* Mobile navigation list items */
+  /* Mobile navigation list items 
   header .nav li{
     width: auto;
     height: auto;
@@ -195,13 +202,18 @@ header h1{
     font-size: clamp(1.5rem, 2vw, 1.5rem);
     width: 90vw;
   }
+    */
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 /* formatting for header link  */
 header h1 a{
   color: inherit;
   text-decoration: none;
-    font-size: clamp(1.5rem, 2vw, 1.5rem);
+  font-size: clamp(1.5rem, 2vw, 1.5rem);
 }
 
 /* Navigation list items (2x2 grid cells) */
@@ -209,7 +221,7 @@ header h1 a{
   display: flex;
   justify-content: center;
   font-family: Major Mono Display, monospace;
-  font-size: 1rem;
+  font-size: 0.5rem;
   border: 0.15rem solid #000;
   border-radius: 0.5rem;
   background-color: var(--logo-bg-color);
@@ -218,7 +230,9 @@ header h1 a{
   align-self: center;
   width: 90%;
   height: 90%;
+  flex: 1 1 auto;
 }
+
 
 /* Navigation link styling */
 .nav li a{ 
@@ -228,8 +242,8 @@ header h1 a{
   display: block;
   border-radius: 1vw;
   border: none;
-  width: 100%;
   font-size: clamp(1.5rem, 2vw, 1.5rem);
+  text-align: center;
 }
 
 /* Navigation link hover effect */
@@ -237,11 +251,17 @@ header h1 a{
   filter: brightness(85%);
 }
 
+.nav li:active{
+  filter: brightness(70%);
+}
+
 #skills-list{
   display: flex;
   flex-direction: row;
   list-style: none;
-  justify-content: space-between;
+  justify-content: center;
+  gap:7vw;
+  flex-wrap: wrap;
 }
 
 .tech{
@@ -293,7 +313,7 @@ ul{
 .section{
   background-color: var(--logo-bg-color);
   padding: 1vw 1vw 1vw 2vw;
-  margin: 2vw;
+  margin: 5vw;
   border-radius: 1rem;
   font-size: clamp(1rem, 2vw, 1.5rem);
   display:flex;
@@ -307,7 +327,7 @@ h2{
   text-decoration: underline;
   border-radius: 1rem;
   background-color: var(--logo-bg-color);
-  padding: 6vw;
+  padding: 1vw;
 }
 
 .section p, .section h3{
@@ -331,6 +351,7 @@ h2{
 .section li{
   margin: 0.5vw 0vw 0vw 2vw;
   font-family: Roboto Mono, Major Mono Display, monospace;
+  margin: 0;
 }
 
 .section li a{
@@ -352,7 +373,6 @@ h2{
 
 .site-preview{
   width: 90%;
-  margin-left: 5%;
   border-radius: 1rem;
 }
 

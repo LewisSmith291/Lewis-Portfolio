@@ -1,0 +1,47 @@
+
+:root{
+  /* Colour scheme variables */
+  --header-bg-color: #182a4b;
+  --links-bg-color: #B8C4A9;
+  --logo-bg-color: #F4E9D7;
+  --body-color: #111d33;
+  --text-color: rgb(231, 255, 253);
+  --link-color: #ffffff;
+}
+
+html{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@font-face {
+  font-family: "Major Mono Display";
+  src: url("./MajorMonoDisplay-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("./RobotoMono-VariableFont_wght.ttf");
+}
+
+body{
+  color: var(--text-color);
+  background-color: var(--body-color);
+  
+  display: flex;
+  flex-direction: column;
+
+  width: 90vw;
+  margin: 0;
+  text-align: center;
+}
+
+body a{
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.tech{
+  width: 5rem;
+}

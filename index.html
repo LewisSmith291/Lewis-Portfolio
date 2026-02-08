@@ -17,29 +17,21 @@
     <meta property="og:url" content="https://github.com/LewisSmith291/Lewis-Portfolio"/>
     <link rel="canonical" href="https://github.com/LewisSmith291/Lewis-Portfolio" />
     <link rel="stylesheet", href="index.css"/>
-    <script src="header.js" defer></script>
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <script src="https://kit.fontawesome.com/a34f81b017.js" crossorigin="anonymous"></script>
   </head>
 
   </script>
   <body>
     <header id="header" onload="setupHeader()" onresize="onResize()">
-      <div class="container" >
+      <div id="title-container" class="container">
         <h1 id="page-title"><div><a href="https://lewissmith291.github.io/Lewis-Portfolio" aria-label="Home">LeWIS_<br>MAKEs<br>_PAGeS</a></div></h1>
-        <div class="line-container" aria-label="Toggle navigation menu">
-          <a onclick="toggleNav()" class="lines-button" aria-label="Toggle navigation menu">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </a>
-        </div>
-        <!--
-        <ul class="nav hide-nav hidden-nav">
-          <li><a href="#home" aria-label="Go to home anchor">HoME</a></li>
-          <li><a href="#skills" aria-label="Go to skills anchor">sKIlls</a></li>
-          <li><a href="#projects" aria-label="Go to projects anchor">pRoJeCTs</a></li>
-          <li><a href="#contact" aria-label="Go to contact anchor">coNTACT</a></li>
-        </ul>-->
+      </div>
+      <div id="nav-grid">
+        <a>home</a>
+        <a>about</a>
+        <a>projects</a>
+        <a>contact</a>
       </div>
     </header>
       <main id="main-content" class="content">
@@ -47,10 +39,6 @@
           <div id="info" class="section">
             <h2>Lewis SMith - Web Developer</h2>
             <p>Freelance, frontend-focused web developer building fast, accessible, and responsive websites.</p>
-          </div>
-          <div id="socials">
-            <a class="social-button" href="https://www.linkedin.com/in/lewis-smith-301518251"><i class="social-icon devicon-linkedin-plain colored"></i><p>LinkedIn</p></a>
-            <a class="social-button" href="https://github.com/LewisSmith291"><i class="social-icon devicon-github-original colored"></i><p>GitHub</p></a>
           </div>
           <div id="about" class="section">
               <h2>About Me</h2>
@@ -115,19 +103,15 @@
             <p>JavaScript project created to practise manipulating and rendering content from arrays, and styling the page to look like a computer terminal.</p>
           </div>
         </section>
-        <section id="contact" class="section" data-aos="fade-down">
           <h2>Contact Me</h2>
-          <ul style="padding: 0">
-            <li><a href="https://github.com/LewisSmith291">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/lewis-smith-301518251/">Linkedin</a></li>
-          </ul>
-          <br>
-          <p style="text-decoration: underline">Contact Information</p>
-          <p>Email: <a href="mailto:lewisterencesmith@gmail.com">lewisterencesmith@gmail.com</a></p>
-          <p>Phone: <a href="tel:+447954100508">(+44) 7954 100508</a></p>
-      </section>
-      </main>
+          <div id="socials">
+            <a class="social-button" href="mailto://lewisterencesmith@gmail.com"><i class="fa fa-envelope social-icon"></i>lewisterencesmith@gmail.com</a>
+            <a class="social-button" href="tel:+447954100508"><i class="fa-solid fa-phone social-icon"></i>(+44)7954 100508</a>
+            <a class="social-button" href="https://www.linkedin.com/in/lewis-smith-301518251"><i class="social-icon devicon-linkedin-plain colored"></i>LinkedIn</a>
+            <a class="social-button" href="https://github.com/LewisSmith291"><i class="social-icon devicon-github-original colored"></i>GitHub</a>
+          </div>
 
+      </main>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>
         AOS.init();
@@ -136,8 +120,6 @@
     <footer id="footer">
       <div class="footer-container">
         <p>&copy; 2026 Lewis Makes Pages. All rights reserved.</p>
-        <p>Email: <a href="mailto:lewisterencesmith@gmail.com">lewisterencesmith@gmail.com</a></p>
-        <p>Phone: <a href="tel:+447954100508">(+44) 7954 100508</a></p>
       </div>
     </footer>
 </html>

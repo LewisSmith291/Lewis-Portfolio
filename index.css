@@ -1,7 +1,7 @@
 
 :root{
   /* Colour scheme variables */
-  --header-bg-color: #182a4b;
+  --header-bg-color: #d17232;
   --links-bg-color: #B8C4A9;
   --logo-bg-color: #F4E9D7;
   --body-color: #182a4b;
@@ -44,26 +44,6 @@ header .container{
   justify-content: center;
 }
 
-/* nav fills columns 2-3 and provides a 2x2 grid for the 4 links */
-header .nav{
-  grid-column: 2 / -1; /* columns 2 and 3 */
-  grid-row: 1 / -1; /* span both rows */
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(2, auto);
-  gap: 0.2rem;
-  margin: 0rem;
-  padding: 0rem;
-  display: grid;
-}
-
-.hidden-nav{
-  top:-450%;
-}
-
-.show-nav{
-  top:80%;
-}
-
 /* keep header fixed, use the inner .container as the 3x2 grid */
 header{
   position: fixed;
@@ -73,6 +53,8 @@ header{
   z-index: 1000;
   background-color: var(--header-bg-color);
   filter: drop-shadow(0 0 2rem rgba(36, 36, 36, 0.8));
+  display: flex;
+  flex-direction: row;
 }
 
 /* Logo/title occupies the entire first column (both rows) */
@@ -103,7 +85,6 @@ header h1{
   align-items: center;
 }
 
-
 header .container{
   display: flex;
   flex-direction: row;
@@ -112,23 +93,6 @@ header .container{
   margin: 0.5rem;
 }
 
-/* Overrites previous attributes when screen is small*/
-@media only screen and (max-width: 750px){ 
-  /*
-  */
-  .section{
-    width: 90vw;
-  }
-  
-  .section h2{
-    padding: 0.25rem;
-    margin: 0.25rem;
-  }
-
-  header .container{
-    flex-direction: column;
-  }
-}
 
 html{
   scroll-behavior: smooth;
@@ -194,15 +158,17 @@ header h1 a{
 }
 
 #socials{
-  display: flex;
-  flex-direction: row;
+  display: grid;
   justify-content: space-evenly;
+  grid-template-columns: 1fr 1fr;
+  width: 90vw;
 }
 
 .social-button{
   display: flex;
   gap: 1vw;
-  padding: 1vw;
+  padding: 2vw;
+  margin: 1vw;
   border-radius: 1vw;
   font-size: 2vw;
   font-family: Roboto Mono, Major Mono Display, monospace;
@@ -210,14 +176,13 @@ header h1 a{
   border: none;
   color: black;
   text-decoration: none;
-  width: 30%;
   justify-content: center;
+  font-size: 1rem;
 }
 
 .social-icon{
   align-self: center;
 }
-
 
 .social-button:hover{
   filter:brightness(90%);
@@ -227,6 +192,19 @@ header h1 a{
 .social-button:active{
   filter:brightness(70%);
 }
+
+/* Overrites previous attributes when screen is small*/
+@media only screen and (max-width: 700px){ 
+  .section h2{
+    padding: 0.25rem;
+    margin: 0.25rem;
+  }
+  #socials{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
 
 ul{
   list-style-type: none;
@@ -245,7 +223,7 @@ ul{
   flex-direction: column;
   align-items: center;
   text-wrap: wrap;
-  width: 60vw;
+  width: 75vw;
 }
 
 .featured{
@@ -257,7 +235,6 @@ ul{
 h2{
   font-family: Major Mono Display, Roboto Mono, monospace;
   font-size: 1.3rem;
-
   border-radius: 1rem;
   background-color: var(--logo-bg-color);
   padding: 2rem;

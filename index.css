@@ -194,7 +194,7 @@ header h1 a{
 }
 
 /* Overrites previous attributes when screen is small*/
-@media only screen and (max-width: 700px){ 
+@media only screen and (max-width: 600px){ 
   .section h2{
     padding: 0.25rem;
     margin: 0.25rem;
@@ -288,6 +288,14 @@ h2{
   width: 90%;
 }
 
+.link{
+  /* Handle overflows for all browsers */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+}
 
 body::after{
   content: "";

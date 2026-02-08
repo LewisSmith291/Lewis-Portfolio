@@ -20,6 +20,10 @@
   src: url("./RobotoMono-VariableFont_wght.ttf");
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   font-family: Arial, sans-serif;
@@ -31,18 +35,6 @@ body {
   align-items: center;
 }
 
-.line-container{
-  display: none;
-}
-
-/* container becomes a 3-column x 2-row grid */
-header .container{
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: repeat(2, auto);
-  gap: 0.5rem;
-  justify-content: center;
-}
 
 /* keep header fixed, use the inner .container as the 3x2 grid */
 header{
@@ -62,8 +54,6 @@ header h1{
   color: rgba(0, 0, 1, 1);
   z-index: 1;
   text-align: center;
-  grid-column: 1 / 2;
-  grid-row: 1 / -1; /* span both rows */
   margin: 0;
   font-family: Major Mono Display, monospace;
   font-size: 1rem;
@@ -93,55 +83,11 @@ header .container{
   margin: 0.5rem;
 }
 
-
-html{
-  scroll-behavior: smooth;
-}
-
 /* formatting for header link  */
 header h1 a{
   color: inherit;
   text-decoration: none;
   font-size: clamp(1.5rem, 2vw, 1.5rem);
-}
-
-/* Navigation list items (2x2 grid cells) */
-.nav li{
-  display: flex;
-  justify-content: center;
-  font-family: Major Mono Display, monospace;
-  font-size: 0.5rem;
-  border: 0.15rem solid #000;
-  border-radius: 0.5rem;
-  background-color: var(--logo-bg-color);
-  transition: color 0.3s, background-color 0.3s;
-  justify-self: center;
-  align-self: center;
-  width: 90%;
-  height: 90%;
-  flex: 1 1 auto;
-}
-
-
-/* Navigation link styling */
-.nav li a{ 
-  color: inherit;
-  text-decoration: none;
-  padding: 0.5rem;
-  display: block;
-  border-radius: 1vw;
-  border: none;
-  font-size: clamp(1.5rem, 2vw, 1.5rem);
-  text-align: center;
-}
-
-/* Navigation link hover effect */
-.nav li:hover{
-  filter: brightness(85%);
-}
-
-.nav li:active{
-  filter: brightness(70%);
 }
 
 #skills-list{

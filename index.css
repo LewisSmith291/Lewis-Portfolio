@@ -230,6 +230,7 @@ ul{
   font-family: Roboto Mono, Major Mono Display, monospace;
   text-decoration: underline;
   color: #4e848fff;
+  text-align: center;
 }
 
 .section a:hover{

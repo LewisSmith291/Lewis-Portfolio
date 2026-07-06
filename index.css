@@ -116,7 +116,7 @@ header h1 a{
   flex-direction: row;
   list-style: none;
   justify-content: center;
-  gap:7vw;
+  gap:2vw;
   flex-wrap: wrap;
 }
 
@@ -199,7 +199,7 @@ ul{
 
 .section{
   background-color: var(--logo-bg-color);
-  padding: 1vw 1vw 1vw 2vw;
+  padding: 1vw;
   margin: 5vw;
   border-radius: 1rem;
   font-size: clamp(1rem, 2vw, 1.5rem);
@@ -224,6 +224,10 @@ ul{
 
 .section p, .section h3{
   font-family: Roboto Mono, Major Mono Display, monospace;
+}
+
+.section p{
+  text-align: center;
 }
 
 .section a{
@@ -263,6 +267,7 @@ ul{
   margin: 1vw 0;
   border-radius: 1rem;
 }
+
 
 .site-preview{
   border-radius: 1rem;

@@ -175,10 +175,9 @@ h2{
 @media only screen and (max-width: 600px){ 
   .section{
     width:90%;
-    margin: 0.5rem;
+    margin: 0.3rem;
   }
   .section h2{
-    padding: 0.3rem;
     margin: 0.3rem;
   }
   #socials{
@@ -228,6 +227,9 @@ ul{
   .content{
     width:95vw;
   }
+  .section h2{
+    margin: 0.3rem;
+  }
 }
 
 .anchor{
@@ -241,6 +243,7 @@ ul{
 
 .section p, .site p{
   text-align: center;
+  margin:0.3rem
 }
 
 .section a, .site a{
@@ -270,6 +273,10 @@ ul{
 
 .site h2{
   background-color: rgba(0,0,0,0);
+  font-family: Roboto Mono, Major Mono Display, monospace;
+  font-weight: 500;
+  padding: 0;
+  margin: 1rem;
 }
 
 .featured{

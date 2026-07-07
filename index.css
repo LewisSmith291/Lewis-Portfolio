@@ -219,32 +219,32 @@ ul{
   font-family: Roboto Mono, Major Mono Display, monospace;
 }
 
-.section p{
+.section p, .site p{
   text-align: center;
 }
 
-.section a{
+.section a, .site a{
   font-family: Roboto Mono, Major Mono Display, monospace;
   text-decoration: underline;
   color: #4e848fff;
   text-align: center;
 }
 
-.section a:hover{
+.section a:hover, .site a:hover{
   color: var(--header-bg-color);
 }
 
-.section ul{
+.section ul, .site ul{
   padding: 1vw;
 }
 
-.section li{
+.section li, .site li{
   margin: 0.5vw 0vw 0vw 2vw;
   font-family: Roboto Mono, Major Mono Display, monospace;
   margin: 0;
 }
 
-.section li a{
+.section li a, .site li a{
   font-family: Roboto Mono, Major Mono Display, monospace;
 }
 
@@ -274,6 +274,7 @@ ul{
   align-items: center;
   text-wrap: wrap;
 }
+
 
 .site-preview{
   border-radius: 1rem;

@@ -281,8 +281,7 @@ ul{
 
 .featured{
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(4, 1fr);
   width:95vw;
   gap:1vw;
   justify-content: center;
@@ -296,6 +295,7 @@ ul{
 }
 
 .site{
+  grid-column: span 2;
   background-color: var(--logo-bg-color);
   padding: 2vw;
   border-radius: 1rem;
@@ -306,6 +306,13 @@ ul{
   text-wrap: wrap;
 }
 
+.first-site{
+  grid-column:span 4;
+}
+
+.last-site{
+  grid-column:span 4;
+}
 
 .site-preview{
   border-radius: 1rem;

@@ -1,3 +1,9 @@
+/*
+
+  Not used anymore, since deprecating the mobile burger interface. Whole header now fits on mobile by default
+
+*/
+
 const style = window.getComputedStyle(document.body);
 const mobileMaxWidth = 450;
 

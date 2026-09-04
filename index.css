@@ -308,6 +308,7 @@ ul{
 
 .first-site{
   grid-column:span 4;
+  justify-self: center;
 }
 
 .last-site{
@@ -316,7 +317,8 @@ ul{
 
 .site-preview{
   border-radius: 1rem;
-  width: 100%;
+  max-width: 100%;
+  max-height: 70svh;
 }
 
 .link{
